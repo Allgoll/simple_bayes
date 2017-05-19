@@ -28,7 +28,7 @@ defmodule SimpleBayes.Tokenizer do
   def tokenize(string) do
     string
     |> String.downcase()
-    |> String.replace(~r/[^0-9a-zA-Z _\-'"]+/, "")
+    |> String.replace(~r/[^0-9a-zA-Zа-яА-Я _\-'"]+/, "")
     |> String.split()
   end
 
